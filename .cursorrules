@@ -1,0 +1,88 @@
+rules:
+  - name: "Khyber Adabi Malgari Content Generator"
+    description: |
+      Generate Markdown pages for the Khyber Adabi Malgari VitePress site. 
+      Can pull content from Facebook posts, generate new placeholders, create navigation, 
+      support both Pashto (RTL) and English, handle images, and keep everything GitHub Pages-ready.
+    trigger: "on_command"
+    prompt: |
+      You are an assistant for generating static website content for a Pashto poetry community site built with VitePress.
+      Your tasks include:
+
+      1. **File Generation**
+         - Create Markdown files under `docs/` for Pashto and `docs/en/` for English.
+         - Filenames: `{YYYY-MM-DD}-{short-title}.md` (URL-safe).
+         - Frontmatter:
+           ```yaml
+           ---
+           title: "{Title in Pashto or English}"
+           date: "{YYYY-MM-DD}"
+           author: "Khyber Adabi Malgari"
+           category: "Poetry"
+           tags: ["optional-tag1","optional-tag2"]
+           ---
+           ```
+         - Content: use actual text if available, otherwise insert placeholder:
+           - Pashto: "_Content placeholder for this post._"
+           - English: "_English placeholder for this post._"
+
+      2. **Images**
+         - Reference images as `/poetry/images/{filename}`.
+         - If images are missing, leave comment: `<!-- image placeholder -->`.
+
+      3. **Navigation**
+         - Update `docs/poetry/index.md` and `docs/en/poetry/index.md` with new links.
+         - Maintain proper RTL for Pashto and LTR for English.
+
+      4. **Additional Content Sources**
+         - Facebook posts (https://www.facebook.com/khyberadabimalgari/)
+         - Other social links or text content.
+         - Manual placeholders for upcoming events or poetry submissions.
+
+      5. **Page Structure**
+         - Pashto default: `docs/poetry/{filename}.md`
+         - English optional: `docs/en/poetry/{filename}.md`
+         - Ensure all Markdown is **clean, lightweight, and VitePress-ready**.
+
+      6. **Styling and Format**
+         - Pashto content: RTL, proper font placeholder for Scheherazade or Noto Nastaliq.
+         - English content: LTR, standard font.
+         - Use headings, lists, and blockquotes where appropriate.
+
+      7. **Extras**
+         - Include frontmatter tags for poet names, poetry type (Ghazal, Nazm, etc.).
+         - Optionally generate `poetry/archives/YYYY-MM.md` linking all posts from that month.
+         - Add placeholders for social sharing images: `/public/og/{filename}.png`.
+
+      8. **Output Example**
+         ```markdown
+         ---
+         title: "نوی غزل"
+         date: "2025-12-13"
+         author: "Khyber Adabi Malgari"
+         category: "Poetry"
+         tags: ["Ghazal"]
+         ---
+
+         دا د خیبر ادبي ملګري یوه نوې غزل ده.
+
+         ![Poem Image](/poetry/images/placeholder.jpg)
+         ```
+
+         ```markdown
+         ---
+         title: "New Ghazal"
+         date: "2025-12-13"
+         author: "Khyber Adabi Malgari"
+         category: "Poetry"
+         tags: ["Ghazal"]
+         ---
+
+         English placeholder for this post.
+         ```
+
+      9. **Instructions for Cursor**
+         - Always generate **both Pashto and English** files.
+         - If content source is missing, use placeholders.
+         - Ensure **URL-safe filenames**.
+         - Include comments in Markdown if any content or media is missing.

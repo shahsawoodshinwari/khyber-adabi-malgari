@@ -1,12 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap');
 
-:root {
+/* RTL styles for Pashto locale */
+[dir="rtl"] {
   direction: rtl;
   text-align: right;
   font-family: 'Scheherazade New', serif;
 }
 
-.VPNavBar,
-.VPSidebar {
+[dir="rtl"] .VPNavBar,
+[dir="rtl"] .VPSidebar {
   direction: rtl;
+}
+
+/* LTR styles for English locale */
+[dir="ltr"] {
+  direction: ltr;
+  text-align: left;
+}
+
+[dir="ltr"] .VPNavBar,
+[dir="ltr"] .VPSidebar {
+  direction: ltr;
 }

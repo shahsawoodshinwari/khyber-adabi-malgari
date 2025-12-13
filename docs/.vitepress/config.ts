@@ -24,7 +24,13 @@ export default defineConfig({
         nav: [
           { text: 'کور', link: '/' },
           { text: 'شاعري', link: '/poetry/' },
-          { text: 'انځورونه', link: '/gallery/' }
+          { text: 'انځورونه', link: '/gallery/' },
+          { text: 'کمیټه', link: '/team' }
+        ],
+        socialLinks: [
+          { icon: 'facebook', link: 'https://www.facebook.com/khyberadabimalgari/' },
+          { icon: 'whatsapp', link: 'https://wa.me/' },
+          { icon: { svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-.88-.05 6.33 6.33 0 0 0 0 12.66 6.34 6.34 0 0 0 6.33-6.33V6.69h4.5z"/></svg>' }, link: 'https://www.tiktok.com/' }
         ],
         footer: {
           message: '© خیبر ادبي ملګري',
@@ -43,7 +49,13 @@ export default defineConfig({
         nav: [
           { text: 'Home', link: '/en/' },
           { text: 'Poetry', link: '/en/poetry/' },
-          { text: 'Gallery', link: '/en/gallery/' }
+          { text: 'Gallery', link: '/en/gallery/' },
+          { text: 'Committee', link: '/en/team' }
+        ],
+        socialLinks: [
+          { icon: 'facebook', link: 'https://www.facebook.com/khyberadabimalgari/' },
+          { icon: 'whatsapp', link: 'https://wa.me/' },
+          { icon: { svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-.88-.05 6.33 6.33 0 0 0 0 12.66 6.34 6.34 0 0 0 6.33-6.33V6.69h4.5z"/></svg>' }, link: 'https://www.tiktok.com/' }
         ],
         footer: {
           message: '© Khyber Adabi Malgari',

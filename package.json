@@ -12,6 +12,7 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "vite-plugin-pwa": "^1.2.0",
     "vitepress": "^1.6.4"
   }
 }

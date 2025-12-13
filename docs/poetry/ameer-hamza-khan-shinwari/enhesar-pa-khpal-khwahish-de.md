@@ -2,6 +2,7 @@
 title: "انحصار په خپل خواهش دے"
 date: "2025-01-13"
 author: "امیر حمزه خان شنواری"
+authorEn: "Ameer Hamza Khan Shinwari"
 category: "Poetry"
 tags: ["Ghazal", "Ameer Hamza Khan Shinwari"]
 ---

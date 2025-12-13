@@ -2,5 +2,7 @@
 title: شاعري
 ---
 
-- [غزل ۱](./ghazal-1)
-- [انحصار په خپل خواهش دے - امیر حمزه خان شنواری](./ghazal-2-ameer-hamza)
+## شاعران
+
+- [امیر حمزه خان شنواری](/poetry/ameer-hamza-khan-shinwari/)
+- [متنوع](/poetry/misc/)

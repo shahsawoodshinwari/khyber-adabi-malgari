@@ -10,16 +10,23 @@ rules:
       Your tasks include:
 
       1. **File Generation**
-         - Create Markdown files under `docs/` for Pashto and `docs/en/` for English.
-         - Filenames: `{YYYY-MM-DD}-{short-title}.md` (URL-safe).
+         - Create Markdown files organized by poet: `docs/poetry/{poet-slug}/{poem-slug}.md`
+         - Poet slug: Create URL-safe slug from poet's name (e.g., "امیر حمزه خان شنواری" → "ameer-hamza-khan-shinwari")
+         - Poem slug: Create URL-safe slug from the first line of the poem or title:
+           - Extract first meaningful words (3-5 words)
+           - Convert to lowercase
+           - Replace spaces with hyphens
+           - Remove special characters, keep only alphanumeric and hyphens
+           - Example: "انحصار په خپل خواهش دے" → "enhesar-pa-khpal-khwahish-de"
          - Frontmatter:
            ```yaml
            ---
-           title: "{Title in Pashto or English}"
+           title: "{First line or title of the poem}"
            date: "{YYYY-MM-DD}"
-           author: "Khyber Adabi Malgari"
+           author: "{Full poet name in Pashto}"
+           authorEn: "{Full poet name in English}"
            category: "Poetry"
-           tags: ["optional-tag1","optional-tag2"]
+           tags: ["Ghazal", "Nazm", "PoetName"]
            ---
            ```
          - Content: use actual text if available, otherwise insert placeholder:
@@ -30,9 +37,17 @@ rules:
          - Reference images as `/poetry/images/{filename}`.
          - If images are missing, leave comment: `<!-- image placeholder -->`.
 
-      3. **Navigation**
-         - Update `docs/poetry/index.md` and `docs/en/poetry/index.md` with new links.
+      3. **Navigation and Organization**
+         - Poetry is organized by poet: `docs/poetry/{poet-slug}/`
+         - Each poet directory should have an `index.md` listing all their poems
+         - Update `docs/poetry/index.md` to list poets (not individual poems)
+         - Update `docs/en/poetry/index.md` to list poets (not individual poems)
          - Maintain proper RTL for Pashto and LTR for English.
+         - When adding a new poem:
+           - If poet directory doesn't exist, create it with `index.md`
+           - Add poem file: `{poet-slug}/{poem-slug}.md`
+           - Update poet's `index.md` with link to new poem
+           - Update main poetry index if poet is new
 
       4. **Additional Content Sources**
          - Facebook posts (https://www.facebook.com/khyberadabimalgari/)
@@ -40,8 +55,10 @@ rules:
          - Manual placeholders for upcoming events or poetry submissions.
 
       5. **Page Structure**
-         - Pashto default: `docs/poetry/{filename}.md`
-         - English optional: `docs/en/poetry/{filename}.md`
+         - Pashto: `docs/poetry/{poet-slug}/{poem-slug}.md`
+         - English: `docs/en/poetry/{poet-slug}/{poem-slug}.md`
+         - Poet index: `docs/poetry/{poet-slug}/index.md` (lists all poems by that poet)
+         - Main poetry index: `docs/poetry/index.md` (lists all poets)
          - Ensure all Markdown is **clean, lightweight, and VitePress-ready**.
 
       6. **Styling and Format**
@@ -55,34 +72,61 @@ rules:
          - Add placeholders for social sharing images: `/public/og/{filename}.png`.
 
       8. **Output Example**
+         
+         Main poetry index (`docs/poetry/index.md`):
          ```markdown
          ---
-         title: "نوی غزل"
-         date: "2025-12-13"
-         author: "Khyber Adabi Malgari"
-         category: "Poetry"
-         tags: ["Ghazal"]
+         title: شاعري
          ---
-
-         دا د خیبر ادبي ملګري یوه نوې غزل ده.
-
-         ![Poem Image](/poetry/images/placeholder.jpg)
+         
+         ## شاعران
+         
+         - [امیر حمزه خان شنواری](./ameer-hamza-khan-shinwari/)
+         - [د بل شاعر نوم](./another-poet-slug/)
          ```
-
+         
+         Poet index (`docs/poetry/ameer-hamza-khan-shinwari/index.md`):
          ```markdown
          ---
-         title: "New Ghazal"
-         date: "2025-12-13"
-         author: "Khyber Adabi Malgari"
-         category: "Poetry"
-         tags: ["Ghazal"]
+         title: "امیر حمزه خان شنواری"
          ---
-
-         English placeholder for this post.
+         
+         ## غزلونه
+         
+         - [انحصار په خپل خواهش دے](./enhesar-pa-khpal-khwahish-de)
+         - [د بل غزل نوم](./another-ghazal-slug)
+         ```
+         
+         Poem file (`docs/poetry/ameer-hamza-khan-shinwari/enhesar-pa-khpal-khwahish-de.md`):
+         ```markdown
+         ---
+         title: "انحصار په خپل خواهش دے"
+         date: "2025-01-13"
+         author: "امیر حمزه خان شنواری"
+         authorEn: "Ameer Hamza Khan Shinwari"
+         category: "Poetry"
+         tags: ["Ghazal", "Ameer Hamza Khan Shinwari"]
+         ---
+         
+         انحصار په خپل خواهش دے
+         نۀ خزان ښۀ نۀ بهار ښۀ
+         ...
          ```
 
-      9. **Instructions for Cursor**
+      9. **Slug Generation Rules**
+         - For poet names: Convert to lowercase, transliterate Pashto to English, replace spaces with hyphens
+           - Examples: "امیر حمزه خان شنواری" → "ameer-hamza-khan-shinwari"
+         - For poem slugs: Use first 3-5 meaningful words from first line or title
+           - Remove common words like "د", "په", "او", "چې" if they appear first
+           - Convert to lowercase, transliterate, replace spaces with hyphens
+           - Keep slugs short (max 50 characters)
+           - Examples: "انحصار په خپل خواهش دے" → "enhesar-pa-khpal-khwahish-de"
+
+      10. **Instructions for Cursor**
          - Always generate **both Pashto and English** files.
          - If content source is missing, use placeholders.
-         - Ensure **URL-safe filenames**.
+         - Ensure **URL-safe filenames** using the slug rules above.
+         - Create poet directory structure if it doesn't exist.
+         - Update poet index when adding new poems.
+         - Update main poetry index when adding new poets.
          - Include comments in Markdown if any content or media is missing.

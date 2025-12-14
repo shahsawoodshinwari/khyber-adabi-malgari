@@ -1,6 +1,6 @@
 {
   "name": "khyber-adabi-malgari",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "scripts": {
     "dev": "vitepress dev docs",

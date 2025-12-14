@@ -1,23 +1,12 @@
----
-layout: page
-title: Committee
----
+import { tiktokIcon } from '../../icons/tiktok'
 
-<script setup>
-import {
-  VPTeamPage,
-  VPTeamPageTitle,
-  VPTeamMembers,
-  VPTeamPageSection
-} from 'vitepress/theme'
-
-// Add your committee members here
-const coreMembers = [
+// Core committee members
+export const coreMembers = [
   {
     avatar: 'https://scontent.flhe5-1.fna.fbcdn.net/v/t39.30808-6/461659607_3853244688280144_6261071206023719087_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEWHXBSNp0MrDLOY4QSp5BjMEi0eHrOaVwwSLR4es5pXIPpMrO20dcH_DBbMQTQz3ATjTgRlZjlo_jM3lLr9WSx&_nc_ohc=jdUbH80vggQQ7kNvwGEZtzS&_nc_oc=AdknMaE8Hd-hnddLKko9uvQIlD4bYN03f0BaD0YYP5izcCcP9AxiUldP67Aaz7BOnUU&_nc_zt=23&_nc_ht=scontent.flhe5-1.fna&_nc_gid=Q-RRtGMdNHie-ImoiRZvvQ&oh=00_Afmx85b29zjrODukUDDyZp81DOgW0YlyYNVrItQaIGhOrQ&oe=6942F4C2',
     name: 'Waseem Akram Mumtahen',
-    title: 'Khyber Adabi Malgari Committee Member',
-    desc: 'A literary community of Pashto poets from Khyber',
+    title: 'د خیبر ادبي ملګري د کمیټې غړی',
+    desc: 'د خیبر د پښتو شاعرانو ادبي ټولنه',
     links: [
       { icon: 'facebook', link: 'https://www.facebook.com/photo/?fbid=3853244684946811&set=a.1376601619277809' }
     ]
@@ -25,28 +14,28 @@ const coreMembers = [
   {
     avatar: 'https://p16-sign-sg.tiktokcdn.com/tos-alisg-avt-0068/2228f36aa7132c5e46baa7f9fbad4f24~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=14579&refresh_token=0afdbd6b&x-expires=1765782000&x-signature=9qWkuEaurM16AJ%2FinQy1fNgW4P8%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my3',
     name: 'Fawad Khan',
-    title: 'Khyber Adabi Malgari Committee Member',
-    desc: 'A literary community of Pashto poets from Khyber',
+    title: 'د خیبر ادبي ملګري د کمیټې غړی',
+    desc: 'د خیبر د پښتو شاعرانو ادبي ټولنه',
     links: [
       { icon: 'facebook', link: 'https://www.facebook.com/hamza.shinwari.7' },
-      { icon: { svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>' }, link: 'https://www.tiktok.com/@fawadshinwaray' }
+      { icon: tiktokIcon, link: 'https://www.tiktok.com/@fawadshinwaray' }
     ]
   },
   {
     avatar: 'https://scontent.flhe5-1.fna.fbcdn.net/v/t39.30808-6/487444597_3629072927224958_9083754097523795276_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeHm5OlAKVnEt1NN2Tmcs1YazhoyDTkftaHOGjINOR-1ofuWxt5uy8p0LuxuZ_Jvl0WUmCdlbI8VW8mFYhFOYUIL&_nc_ohc=QU7S80inGfgQ7kNvwFQ92K6&_nc_oc=Adn0Ve5m_Ny6I8AoV9AJ_6fWJJScuO5nua-bQHQnjSvYKb2guApqQh7x1HLfb9IjklA&_nc_zt=23&_nc_ht=scontent.flhe5-1.fna&_nc_gid=-IrIvGr65fuwJo_syoiV8w&oh=00_Afmwc7ZWr0H9FQ9wCG0accXhFV6M5r5IFMVw_YX88jCtEw&oe=6943029B',
     name: 'Dr. Atif Parhar',
-    title: 'Khyber Adabi Malgari Committee Member',
-    desc: 'A literary community of Pashto poets from Khyber',
+    title: 'د خیبر ادبي ملګري د کمیټې غړی',
+    desc: 'د خیبر د پښتو شاعرانو ادبي ټولنه',
     links: [
       { icon: 'facebook', link: 'https://www.facebook.com/dratif.khan.668083' },
-      { icon: { svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>' }, link: 'https://www.tiktok.com/@parhar.afridi.555' }
+      { icon: tiktokIcon, link: 'https://www.tiktok.com/@parhar.afridi.555' }
     ]
   },
   {
     avatar: 'https://scontent.flhe5-1.fna.fbcdn.net/v/t39.30808-6/462464897_3807782162795526_5817393505405745836_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGHa01yMGIGDi6KrSwdQ-pTLl5qaoTumFYuXmpqhO6YVhAlwvOQedC7SEoZlH6inxrOAY9jIYZ0Y1fFE1U492Rn&_nc_ohc=vBBmxavaR4cQ7kNvwHQgJvK&_nc_oc=AdmkEpp2ubHuaaJoYtoc0eyK_RruZISIj6p3gtFO6kDjOP2KaJQWkEKVfOhA8tJ1-1o&_nc_zt=23&_nc_ht=scontent.flhe5-1.fna&_nc_gid=9dOT3IF8_G4DO_Ww1GbRAQ&oh=00_AfkroxW9sNr8J2uoYeaYO5V6QRfnF-N-pty7Lbmt9D8Y0g&oe=6942F757',
     name: 'Naseer Hamdard',
-    title: 'Khyber Adabi Malgari Committee Member',
-    desc: 'A literary community of Pashto poets from Khyber',
+    title: 'د خیبر ادبي ملګري د کمیټې غړی',
+    desc: 'د خیبر د پښتو شاعرانو ادبي ټولنه',
     links: [
       { icon: 'facebook', link: 'https://www.facebook.com/hamdard202' }
     ]
@@ -54,8 +43,8 @@ const coreMembers = [
   {
     avatar: 'https://scontent.flhe5-1.fna.fbcdn.net/v/t39.30808-6/449282877_1143738970181972_5669916632861898808_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeH52ZNmFiXzecBeHf-GG7tFZXoWVnvIG2NlehZWe8gbY1NtrGGa7yWbUYfRnwPnxzxUsmF1hx68OIkmQdcQPtDC&_nc_ohc=-6IEyQj7POoQ7kNvwFpryga&_nc_oc=AdlP6Zh32FxmQh4k7HGAwL6nQWbR4O_fbrLhgO0NbJZbSNC0dvo2cAVt6PfWa57Pi2Y&_nc_zt=23&_nc_ht=scontent.flhe5-1.fna&_nc_gid=owBnJdpO-kOx3XmbIy9zjQ&oh=00_Afklbw4RpxOonnpOhP7oTR9oDKF_4ZFsQQJdfovmHn8pqw&oe=6942FA08',
     name: 'Khadim Karim',
-    title: 'Khyber Adabi Malgari Committee Member',
-    desc: 'A literary community of Pashto poets from Khyber',
+    title: 'د خیبر ادبي ملګري د کمیټې غړی',
+    desc: 'د خیبر د پښتو شاعرانو ادبي ټولنه',
     links: [
       { icon: 'facebook', link: 'https://www.facebook.com/khadim.rohi' }
     ]
@@ -63,40 +52,14 @@ const coreMembers = [
   {
     avatar: 'https://scontent.flhe5-1.fna.fbcdn.net/v/t39.30808-6/457872640_122147062580265308_3559153551062309292_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEtwJ4htsRusTrLBC3fUL6BVeM75jwVDYhV4zvmPBUNiLcX5tGeTXTLh79dRr90SXtwDAGPPXUj8V0ez_WKiQ94&_nc_ohc=oc4NVM_wqj8Q7kNvwFnthj-&_nc_oc=AdmUF1-hZltaXgBrGYWRuG6AcZAcUGjUPWbQnCGl26Qc-oM4CtLkefcaa4CwnzR8RvU&_nc_zt=23&_nc_ht=scontent.flhe5-1.fna&_nc_gid=jmq89pifKJKnatOh0Pl9jA&oh=00_Afm_bC37q6VEI7Jpepm9yare3bN-nwxCtp_w_y0g5lI9FA&oe=6942DE3B',
     name: 'Atif Khan',
-    title: 'Khyber Adabi Malgari Committee Member',
-    desc: 'A literary community of Pashto poets from Khyber',
+    title: 'د خیبر ادبي ملګري د کمیټې غړی',
+    desc: 'د خیبر د پښتو شاعرانو ادبي ټولنه',
     links: [
       { icon: 'facebook', link: 'https://www.facebook.com/atif.khan.611802' }
     ]
   }
 ]
 
-const advisors = [
-  // Add advisory committee members here if needed
-]
-</script>
-
-<VPTeamPage>
-  <VPTeamPageTitle>
-    <template #title>
-      Khyber Adabi Malgari Committee
-    </template>
-    <template #lead>
-      The literary community of Pashto poets from Khyber is managed by this committee. The committee works to support literary activities and poets.
-    </template>
-  </VPTeamPageTitle>
-  
-  <VPTeamMembers size="medium" :members="coreMembers" />
-  
-  <!-- Uncomment and add sections if you have different types of members -->
-  <!--
-  <VPTeamPageSection>
-    <template #title>Advisors</template>
-    <template #lead>Committee advisors</template>
-    <template #members>
-      <VPTeamMembers size="small" :members="advisors" />
-    </template>
-  </VPTeamPageSection>
-  -->
-</VPTeamPage>
+// Advisory committee members (currently empty, can be added later)
+export const advisors: any[] = []
 

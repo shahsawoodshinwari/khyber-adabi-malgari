@@ -1,15 +1,94 @@
+/* Noto Sans Arabic font for Pashto language */
+@font-face {
+  font-family: 'Noto Sans Arabic';
+  src: url('/khyber-adabi-malgari/fonts/Noto_Sans_Arabic/static/NotoSansArabic-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans Arabic';
+  src: url('/khyber-adabi-malgari/fonts/Noto_Sans_Arabic/static/NotoSansArabic-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans Arabic';
+  src: url('/khyber-adabi-malgari/fonts/Noto_Sans_Arabic/static/NotoSansArabic-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans Arabic';
+  src: url('/khyber-adabi-malgari/fonts/Noto_Sans_Arabic/static/NotoSansArabic-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans Arabic';
+  src: url('/khyber-adabi-malgari/fonts/Noto_Sans_Arabic/static/NotoSansArabic-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bahij Badr font kept for potential future use */
+@font-face {
+  font-family: 'Bahij Badr';
+  src: url('/khyber-adabi-malgari/fonts/BahijBadr-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bahij Badr';
+  src: url('/khyber-adabi-malgari/fonts/BahijBadr-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fallback to Scheherazade New from Google Fonts if local fonts fail to load */
 @import url('https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap');
 
 /* RTL styles for Pashto locale */
 [dir="rtl"] {
   direction: rtl;
   text-align: right;
-  font-family: 'Scheherazade New', serif;
+  font-family: 'Noto Sans Arabic', 'Bahij Badr', 'Scheherazade New', sans-serif;
+  font-weight: 400;
 }
 
+/* Apply bold font weight to headings in Pashto */
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] h6 {
+  font-weight: 700;
+  font-family: 'Noto Sans Arabic', 'Bahij Badr', 'Scheherazade New', sans-serif;
+}
+
+/* Apply font to navigation and sidebar */
 [dir="rtl"] .VPNavBar,
 [dir="rtl"] .VPSidebar {
   direction: rtl;
+  font-family: 'Noto Sans Arabic', 'Bahij Badr', 'Scheherazade New', sans-serif;
+}
+
+/* Apply font to content area */
+[dir="rtl"] .VPContent,
+[dir="rtl"] .vp-doc {
+  font-family: 'Noto Sans Arabic', 'Bahij Badr', 'Scheherazade New', sans-serif;
 }
 
 /* LTR styles for English locale */
